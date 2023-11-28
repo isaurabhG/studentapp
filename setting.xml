@@ -1,6 +1,41 @@
-<settings>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <!-- Local repository location -->
+    <localRepository>${user.home}/.m2/repository</localRepository>
+
+    <!-- Configuring servers for deploying artifacts -->
     <servers>
-        <!-- Add your server configurations if needed -->
+        <!-- Example server configuration for deploying to a remote repository -->
+        <server>
+            <id>my-remote-repository</id>
+            <username>your-username</username>
+            <password>your-password</password>
+        </server>
+
+        <!-- Tomcat Server for deploying web applications -->
+        <server>
+            <id>TomcatServer</id>
+            <username>tomcat</username>
+            <password>redhat1</password>
+        </server>
     </servers>
+
+    <!-- Mirror settings (if needed) -->
+    <!-- <mirrors>
+         <mirror>
+             <id>central</id>
+             <url>https://repo.maven.apache.org/maven2</url>
+             <mirrorOf>central</mirrorOf>
+         </mirror>
+     </mirrors> -->
+
+    <!-- Active profiles -->
+    <!-- <activeProfiles>
+         <activeProfile>profile-1</activeProfile>
+     </activeProfiles> -->
+
 </settings>
+
 
