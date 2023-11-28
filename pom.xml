@@ -17,5 +17,30 @@
     <dependencies>
         <!-- Add your dependencies here -->
     </dependencies>
-</project>
 
+    <build>
+        <plugins>
+            <!-- Maven War Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.3</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Tomcat Plugin -->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:8080/manager/text</url> <!-- Adjust the URL to your Tomcat manager -->
+                    <server>TomcatServer</server> <!-- Specify the server ID configured in your settings.xml -->
+                    <path>/web-app</path> <!-- Context path under which the app will be deployed -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
