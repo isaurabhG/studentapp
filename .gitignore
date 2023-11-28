@@ -1,0 +1,19 @@
+# Maven
+target/
+
+# Eclipse
+.project
+.classpath
+.settings/
+*.iml
+
+# IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# macOS
+.DS_Store
+
